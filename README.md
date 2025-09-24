@@ -29,6 +29,17 @@
 
 ### CS 310: Automata Theory
 
+#### Evaluation
+
+| Evaluation    | Marks | Remarks                     |
+| ------------- | ----- | --------------------------- |
+| Quizzes       | 45    | 3 Quizzes. In lectures      |
+| Midsem        | 25    | 2 hrs                       |
+| Endsem        | 30    |                             |
+| Assignment    | 0     | Negative for no submission  |
+
+No attendance
+
 ### CS 339: Abstractions and Paradigms of Programming
 
 #### Evaluation
@@ -39,6 +50,8 @@
 | Midsem        | 30    | 2 hrs                       |
 | Endsem        | 40    | 2.5 hrs                     |
 | Participation | 10    | PCs, Attendance, Activities |
+
+- Attendance Policy: <50% => DX Grade
 
 ### CS 348: Computer Networks
 
@@ -70,7 +83,7 @@
 
 | Evaluation           | Marks | Remarks                     |
 | -------------------- | ----- | --------------------------- |
-| In Lab Evaluation    | 40    | In every lab              |
+| In Lab Evaluation    | 40    | In every lab                |
 | Midsem               | 30    |                             |
 | Endsem               | 30    |                             |
 
