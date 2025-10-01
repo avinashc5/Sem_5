@@ -90,3 +90,8 @@ No attendance
 - Attendance Policy: <75% => DX Grade
 
 ## Electives:
+
+### CS 747: Foundations of Intelligent and Learning Agents
+All the information can be found on: https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-s2025/index.html
+
+You can go to his website and also find the previous year offerings of the course
