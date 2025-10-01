@@ -1,0 +1,91 @@
+Q1:
+
+(flatten '((1 2) (3 (4 5))))  ; -> (1 2 3 4 5)
+(flatten '((a (b)) c))        ; -> (a b c)
+(flatten '(()))               ; -> ()
+(flatten '(1 (2 (3 (4)))))    ; -> (1 2 3 4)
+(flatten '((((x)))))          ; -> (x)
+
+Q2:
+
+(apply-n (lambda (y) (+ y 1)) 5 0)           ; -> 5
+(apply-n (lambda (y) (* y 2)) 3 1)           ; -> 8
+(apply-n (lambda (y) (cons 'x y)) 2 '())     ; -> (x x)
+(apply-n (lambda (s) (string-append s "!")) 3 "hi") ; -> "hi!!!"
+(apply-n (lambda (y) (+ y 100)) 0 7)         ; -> 7
+
+Q3:
+
+(primes-under 10) ; -> (2 3 5 7)
+(primes-under 2)  ; -> ()
+(primes-under 20) ; -> (2 3 5 7 11 13 17 19)
+(primes-under 3)  ; -> (2)
+(primes-under 120) ; -> (2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 101 103 107 109 113)
+(primes-under 200) 
+; -> (2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 101 103 107 109 113 
+;     127 131 137 139 149 151 157 163 167 173 179 181 191 193 197 199)
+
+Q4:
+
+(running-max '(3 1 4 2 6)) ; -> (3 3 4 4 6)
+(running-max '(1 2 3))     ; -> (1 2 3)
+(running-max '())          ; -> ()
+(running-max '(5 4 3 2))   ; -> (5 5 5 5)
+(running-max '(10))        ; -> (10)
+(running-max '(2 2 2 3 2)) ; -> (2 2 2 3 3)
+
+Q5:
+
+(words-longer-than '("the" "quick" "brown" "fox" "jumps") 3)
+; -> ("brown" "jumps" "quick")
+
+(words-longer-than '("a" "to" "cat" "dogs") 2)
+; -> ("cat" "dogs")
+
+(words-longer-than '() 5)
+; -> ()
+
+(words-longer-than '("elephant" "giraffe") 3)
+; -> ("elephant" "giraffe")
+
+(words-longer-than '("Aaa" "aaa" "B") 2)
+; -> ("Aaa" "aaa")
+
+(words-longer-than '("beta" "alpha" "lambda") 3)
+; -> ("alpha" "beta" "lambda")
+
+Q6:
+
+// trim the expected answers to an integer
+
+List<Shape> shapes = Arrays.asList(new Circle(2), new Rectangle(3, 5));
+System.out.println(largestShape(shapes));
+// expect: Rectangle with area = 15 perimeter = 16
+
+List<Shape> shapes2 = Arrays.asList(new Circle(3), new Rectangle(2, 5));
+System.out.println(largestShape(shapes2));
+// expect: Circle with area ≈ 28, perimeter ≈ 18
+
+List<Shape> shapes3 = Arrays.asList(new Rectangle(4, 2), new Rectangle(3, 3), new Circle(1.5));
+System.out.println(largestShape(shapes3));
+// expect: Rectangle with area = 9, perimeter = 12
+
+Q7:
+
+Playable song1 = new Song(200);
+Playable song2 = new Song(180);
+Playable playlist = new Playlist(Arrays.asList(song1, song2));
+System.out.println(playlist.duration());
+// expect: 380
+
+Playable s1 = new Song(60);
+Playable s2 = new Song(90);
+Playable p1 = new Playlist(Arrays.asList(s1, s2)); // 150
+Playable s3 = new Song(200);
+Playable p2 = new Playlist(Arrays.asList(p1, s3));
+System.out.println(p2.duration());
+// expect: 350
+
+Playable empty = new Playlist(Collections.emptyList());
+System.out.println(empty.duration());
+// expect: 0
